@@ -21,7 +21,9 @@ const router = createBrowserRouter([
     path: "/guide",
     element: <Guide />
   }
-])
+], {
+  basename: "/weather-app"
+})
 
 function App() {
 
