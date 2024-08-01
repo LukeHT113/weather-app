@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 156px;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  margin-bottom: 8px;
+}
+.copyright {
+  font-size: 13px;
+}
+.small {
+  margin: 0;
+  font-size: 11px;
+}

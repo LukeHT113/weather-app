@@ -1,0 +1,146 @@
+.upper_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.upper_container__img {
+  position: absolute;
+  bottom: -0%;
+  z-index: -2;
+  opacity: 0.5;
+}
+
+.current_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  max-width: 1400px;
+}
+.current__location {
+  margin: 0;
+  font-size: 24px;
+}
+.current__date {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00000080;
+}
+.current__time {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.current__row {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.current__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.current__img {
+  width: 128px;
+  height: 128px;
+}
+.current__temp {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+}
+.current__apparent_temp {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+.current__desc {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  font-style: italic;
+}
+.current__fav {
+  position: absolute;
+  right: 8px;
+}
+
+.more_info__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1334px;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+}
+.more_info__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.more_info__warnings {
+  display: flex;
+  flex-direction: column;
+}
+.more_info__uv {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: aliceblue;
+  border: 2px solid aliceblue;
+  font-size: 20px;
+  font-weight: 700;
+}
+.more_info__uv_text {
+  font-size: 16px;
+  font-weight: 500;
+}
+.more_info__citations {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Loader*/
+.loader {
+  margin: 32px 8px;
+  width: 40px;
+  aspect-ratio: 1;
+  --c: linear-gradient(var(--col-primary) 0 0);
+  --r1: radial-gradient(farthest-side at bottom,var(--col-primary) 93%,#0000);
+  --r2: radial-gradient(farthest-side at top   ,var(--col-primary) 93%,#0000);
+  background: 
+    var(--c) ,var(--r1),var(--r2),
+    var(--c) ,var(--r1),var(--r2),
+    var(--c) ,var(--r1),var(--r2);
+  background-repeat: no-repeat;
+  animation: loader 1s infinite alternate;
+}
+@keyframes loader {
+  0%,25% {
+  background-size: 8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+  background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+}
+50% {
+  background-size: 8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+  background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+}
+75% {
+  background-size: 8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+  background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+}
+95%,100% {
+  background-size: 8px 100%,8px 4px, 8px 4px,8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px;
+  background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
+}
+}
