@@ -172,7 +172,7 @@ export default function ForecastResult() {
 
         </div>
         <div className={styles.more_info__citations}>
-          <small>What does it mean? Look at our <Link target="_top" to={`/guide`}>Weather Guide</Link>.</small>
+          <small>What does it mean? Look at our <Link target="_top" relative="path" to={`../guide`}>Weather Guide</Link>.</small>
         </div>
       </div>
       </> : <div className={styles.loader}></div>
